@@ -1,7 +1,12 @@
 {
   "name": "sct-standards",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "A compendium of mexican highway standards.",
+  "main": "main.js",
+  "repository": "https://github.com/GAJAGUAR/sct-standards",
+  "author": "G.A.JAGUAR",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
