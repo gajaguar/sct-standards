@@ -1,43 +1,6 @@
-import Vue from 'vue'
-import Vuetify, {
-  VAlert,
-  VApp,
-  VContainer,
-  VRow,
-  VCol,
-  VCard,
-  VTextField,
-  VContent,
-  VAppBar,
-  VDataTable,
-  VImg,
-  VToolbar
-} from 'vuetify/lib'
-import es from 'vuetify/es5/locale/es'
+import Vue from "vue";
+import Vuetify from "vuetify/lib/framework";
 
-Vue.use(Vuetify, {
-  components: {
-    VAlert,
-    VApp,
-    VContainer,
-    VRow,
-    VCol,
-    VCard,
-    VTextField,
-    VContent,
-    VAppBar,
-    VDataTable,
-    VImg,
-    VToolbar
-  }
-})
+Vue.use(Vuetify);
 
-export default new Vuetify({
-  lang: {
-    locales: { es },
-    current: 'es'
-  },
-  icons: {
-    iconfont: 'md'
-  }
-})
+export default new Vuetify({});

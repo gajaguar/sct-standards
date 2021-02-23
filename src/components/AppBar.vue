@@ -20,11 +20,11 @@
 
 <script>
 export default {
-  name: 'AppBar',
+  name: "AppBar",
 
   data: () => ({
-    title: 'Normas SCT',
-    subtile: 'Carreteras'
+    title: "Normas SCT",
+    subtile: "Carreteras"
   })
-}
+};
 </script>

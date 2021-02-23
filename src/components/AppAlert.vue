@@ -1,21 +1,15 @@
 <template>
-  <v-alert
-    border="left"
-    dense
-    dismissible
-    text
-    type="info"
-  >
+  <v-alert border="left" dense dismissible text type="info">
     {{ caption }}
   </v-alert>
 </template>
 
 <script>
 export default {
-  name: 'AppAlert',
+  name: "AppAlert",
 
   data: () => ({
-    caption: 'Actualizado: 2020-05-05'
+    caption: "Actualizado: 2020-05-05"
   })
-}
+};
 </script>

@@ -1,71 +1,52 @@
 <template>
   <v-app>
-    <app-bar />
-    <v-content id="content">
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <v-row
-          align="stretch"
-          justify="center"
-        >
-          <v-col class="text-center">
-            <app-alert />
-            <v-card>
-              <v-card-title>
-                <v-text-field
-                  append-icon="search"
-                  autofocus
-                  clearable
-                  hide-details
-                  label="Buscar"
-                  outlined
-                  v-model="search"
-                ></v-text-field>
-              </v-card-title>
-                <app-table
-                  :headers="headers"
-                  :items="standards"
-                  :search="search"
-                />
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-content>
+    <v-app-bar app color="primary" dark>
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <HelloWorld />
+    </v-main>
   </v-app>
 </template>
 
 <script>
-import AppAlert from './components/AppAlert.vue'
-import AppBar from './components/AppBar.vue'
-import AppTable from './components/AppTable.vue'
-import headers from './utils/headers'
-import standards from './utils/standards'
+import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    AppAlert,
-    AppBar,
-    AppTable
+    HelloWorld
   },
 
   data: () => ({
-    headers,
-    search: '',
-    standards
-  }),
-
-  created() {
-    this.$vuetify.theme.dark = false
-  }
-}
+    //
+  })
+};
 </script>
-
-<style scoped lang="sass">
-  #content
-    margin-top: 128px
-</style>
